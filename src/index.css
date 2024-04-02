@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+.shadowbox{
+    box-shadow: 15px 15px 3px #898DAA;
+}
+.backgroundimage{
+    background-image: url("/public/HomePageImage.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
