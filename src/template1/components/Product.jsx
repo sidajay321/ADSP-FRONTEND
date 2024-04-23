@@ -1,8 +1,7 @@
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import AppLayout from "../../AppLayout";
-import DataProduct from "../Mockdata/DataProduct";
-import React, { useRef, useState } from "react";
+import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
@@ -44,7 +43,7 @@ const Product = ({ businessProduct }) => {
                     <a href={item.serImg}>
                       <img
                         src={url + item.bp_image}
-                        alt={'No Image'}
+                        alt={""}
                         className="h-[210px] w-full rounded-md object-cover"
                       />
                     </a>

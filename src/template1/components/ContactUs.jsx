@@ -12,6 +12,7 @@ const ContactUs = ({ businessData }) => {
         <div className="w-320px rounded-[24px] lg:rounded-[70px] bg-[#3B3C41] min-h-[52px] lg:min-h-[111px] lg:w-[46%]">
           <div className="min-h-[52px] lg:min-h-[111px]  flex lg:items-center">
             <img
+              alt=''
               src="1.png"
               className="w-[30px] lg:w-[75px] h-[30px] lg:h-[75px] rounded-[50%] ml-[15px] my-auto"
             />
@@ -31,6 +32,7 @@ const ContactUs = ({ businessData }) => {
         <div className="w-320px rounded-[24px] lg:rounded-[70px] bg-[#3B3C41] min-h-[52px] lg:min-h-[111px] lg:w-[46%]">
           <div className="min-h-[52px] lg:min-h-[111px]  flex lg:items-center">
             <img
+              alt=''
               src="4.png"
               className="w-[30px] lg:w-[75px] h-[30px] lg:h-[75px] rounded-[50%] ml-[15px] my-auto"
             />
@@ -50,6 +52,7 @@ const ContactUs = ({ businessData }) => {
             <img
               src="5.png"
               className="w-[30px] lg:w-[75px] h-[30px] lg:h-[75px] rounded-[50%] ml-[15px] my-auto"
+              alt=''
             />
             <div className="ml-[11px] lg:ml-[25px] mt-[2px] ">
               <p className="text-[#FFFFFF] font-[700] text-[14px] lg:text-[24px] p-0">
@@ -70,6 +73,7 @@ const ContactUs = ({ businessData }) => {
             <img
               src="6.png"
               className="w-[30px] lg:w-[75px] h-[30px] lg:h-[75px] rounded-[50%] ml-[15px] my-auto"
+              alt=''
             />
             <div className="ml-[11px] lg:ml-[25px] mt-[2px] ">
               <p className="text-[#FFFFFF] font-[700] text-[14px] lg:text-[24px] p-0">

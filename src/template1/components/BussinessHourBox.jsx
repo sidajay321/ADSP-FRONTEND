@@ -62,20 +62,3 @@ const BussinessHourBox = () => {
 }
 
 export default BussinessHourBox
-
-
-// mock deta formate 
-
-{/* <div className="w-[295px] h-[276px] lg:w-[672px] lg:min-h-[522px] mx-auto rounded-[30px] mt-[30px] bg-[#353956] shadowbox lg:mt-[80px] my-16">
-<div className="w-[241px] lg:w-[85%] text-[#a3a8d3] ml-3 lg:ml-7 h-[100%] py-5 lg:py-9 lg:text-[32px]">
-  {BussinessH.map((dayInfo, index) => (
-    <div key={index} className="flex flex-col py-[4px] lg:py-[12px]">
-      <div className="flex justify-between">
-        <div>{dayInfo.day}</div>
-        <div>{dayInfo.hours}</div>
-      </div>
-      <hr className="w-[100%] bg-[#a3a8d3] h-[1px] border-none" />
-    </div>
-  ))}
-</div>
-</div> */}

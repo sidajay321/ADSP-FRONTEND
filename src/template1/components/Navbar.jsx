@@ -46,7 +46,7 @@ const Navnar = () => {
             <div className="flex items-center flex-1">
               <a href="/">
               <span className="text-3xl font-bold">anyintech</span>
-              {/* <img src="/" alt="comLogo" /> */}
+              {/* <img alt='' src="/" alt="comLogo" /> */}
               </a>
             </div>
             <div className="lg:flex lg:flex-1 items-center justify-end font-normal hidden">
