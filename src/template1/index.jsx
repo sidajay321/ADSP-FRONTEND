@@ -17,7 +17,7 @@ const Template1Home = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('https://www.admin.bizzata.in/custom/rest/api.php?getUserBusinessData=true&businessId=' + params.businessId);
+        const response = await fetch(`https://www.admin.bizzata.in/custom/rest/api.php?getUserBusinessData=true&businessId=${params.businessId}`);
         const data = await response.json();
         setBusinessData(data);
       } catch (error) {
