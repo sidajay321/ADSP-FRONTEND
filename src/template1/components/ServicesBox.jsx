@@ -8,7 +8,8 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Pagination, Navigation } from "swiper/modules";
-const ServicesBox = () => {
+const ServicesBox = ({ businessServices }) => {
+  const url = 'http://localhost/adsp/assets/uploads/'
   return (
     <div id="services" className=" h-auto  bg-[#F2F1E5] py-24">
       <h3 className="font-bold text-5xl text-[#2C2927] text-center mt-7">
@@ -34,24 +35,24 @@ const ServicesBox = () => {
             modules={[Pagination, Navigation]}
             className="mySwiper"
           >
-            {ServicesBoxData.map((item, index) => (
+            {businessServices?.map((item, index) => (
               <SwiperSlide key={index}>
                 <div className="text-[#2C2927]  flex flex-row flex-wrap justify-center gap-4  scale-up-center">
                   <div className="w-[350px] text-center mb-8">
                     <h2 className="py-5 mt-8 font-medium text-2xl px-2">
-                      {item.serName}
+                      {item.bs_service_name}
                     </h2>
-                    <a href={item.serImg}>
+                    <a href={item.bs_service_name}>
                       <img
-                        src={item.serImg}
-                        alt={item.altText}
+                        src={url + item.bs_image}
+                        alt={item.bs_service_name}
                         className="h-[100px] w-[100px] m-auto"
                       />
                     </a>
                     <div className="p-4">
                       <div>
                         <p className="text-lg text-[#534A4A] leading-7">
-                          {item.serAbout}
+                          {item.bs_service_description}
                         </p>
                       </div>
                     </div>

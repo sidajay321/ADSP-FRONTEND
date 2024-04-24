@@ -44,7 +44,7 @@ const OurGallery = ({ businessGallery }) => {
 
                 <div className='flex-wrap justify-center mt-[60px] hidden px-[10px] gap-y-[12px] lg:flex'>
                     {
-                        businessGallery.map((e, i) => (
+                        businessGallery?.map((e, i) => (
                             <img alt='' src={url + e.bg_image} className='w-[281px] transition-transform transform duration-100 hover:scale-110 h-[168px] rounded-[12px] lg:h-[191px] lg:w-[318px] lg:rounded-[12px] mx-2' onClick={() => openPopup(i)} />
                         ))
                     }

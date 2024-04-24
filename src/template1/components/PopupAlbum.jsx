@@ -11,7 +11,7 @@ import { GrFormNext } from "react-icons/gr";
 const PopupAlbum = ({ url, setIsPopupOpen, imsg, setImage, businessGallery }) => {
     const [imagarr, setImagarr] = useState([])
     useEffect(() => {
-        setImagarr(businessGallery.map((e) => url + e.bg_image))
+        setImagarr(businessGallery?.map((e) => url + e.bg_image))
     }, [businessGallery, url]);
     let handleNextImage = () => {
         if (imsg === imagarr.length - 1) {
