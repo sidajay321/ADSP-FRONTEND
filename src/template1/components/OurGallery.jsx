@@ -7,7 +7,7 @@ import PopupAlbum from './PopupAlbum';
 
 const OurGallery = ({ businessGallery }) => {
     console.log(businessGallery)
-    const url = 'http://localhost/adsp/assets/uploads/'
+    const url = 'https://www.admin.bizzata.in/adsp/assets/uploads/'
     let [isPopOpen, setIsPopupOpen] = useState(false);
     let [imsg, setImage] = useState(0);
 

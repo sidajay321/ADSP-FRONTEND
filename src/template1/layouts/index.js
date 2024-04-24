@@ -9,7 +9,7 @@ const Layout = ({ children }) => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await fetch('http://localhost/adsp/custom/rest/api.php?getUserBusinessData=true&businessId=' + params.businessId);
+                const response = await fetch('https://www.admin.bizzata.in/adsp/custom/rest/api.php?getUserBusinessData=true&businessId=' + params.businessId);
                 const data = await response.json();
                 setBusinessData(data);
             } catch (error) {
