@@ -2,7 +2,7 @@ import React from "react";
 import AppLayout from "../../AppLayout";
 import QR from "../assets/QR.jpeg";
 function Footer({ businessData }) {
-  const url = 'https://www.admin.bizzata.in/adsp/assets/uploads/'
+  const url = 'https://www.admin.bizzata.in/assets/uploads/'
   return (
     <footer className="w-full bg-[#FBE8A6] text-white h-auto">
       <AppLayout>
