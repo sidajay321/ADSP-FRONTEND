@@ -10,7 +10,7 @@ import { Pagination, Navigation } from "swiper/modules";
 
 const Product = ({ businessProduct }) => {
   console.log(businessProduct);
-  const url = 'https://www.admin.bizzata.in/assets/uploads/'
+  const url = 'http://localhost/adsp/assets/uploads/'
   return (
     <div id="product" className=" h-auto  bg-[#ffffff] py-24">
       <h3 className="font-bold text-5xl text-[#2C2927] text-center mt-7 mb-10">
