@@ -28,7 +28,7 @@ const Navnar = () => {
             <a href="#services">Services</a>
           </li>
           <li className="my-4 py-4 border-slate-800 hover:bg-slate-950">
-            <a href="#inquryform">Contct Us</a>
+            <a href="#inquryform">Contact Us</a>
           </li>
           <li className="my-4 py-4 border-slate-800 hover:bg-slate-950">
             <a href="#gallery">Gallery</a>

@@ -62,7 +62,7 @@ const Navbar = () => {
                     <a href="#services">Services</a>
                   </li>
                   <li className="hover:text-black transition  hover:underline  cursor-pointer">
-                    <a href="#inquryform">Contct Us</a>
+                    <a href="#inquryform">Contact Us</a>
                   </li>
                   <li className="hover:text-black transition  hover:underline  cursor-pointer">
                     <a href="#gallery">Gallery</a>
