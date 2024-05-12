@@ -4,7 +4,7 @@ import map from "./assits/Map Marker.png"
 import mal from "./assits/Upload Mail.png"
 import cal from "./assits/Call Disconnected.png"
 import ctg from "./assits/Medium Priority.png"
-const ContactUs = () => {
+const ContactUs = ({ businessData, userData }) => {
   return (
     <AppLayout>
       <div className=" my-5">
@@ -23,7 +23,7 @@ const ContactUs = () => {
 
                 <div className="flex-col">
                   <h1 className="text-[16px] md:text-[24px] font-semibold">VISIT US :</h1>
-                  <p className="text-[16px] lg:text-[22px] md:text-[15px] ">vasant vihar, nikol, Ahmedabad 382330</p>
+                  <p className="text-[16px] lg:text-[22px] md:text-[15px] ">{businessData?.ub_address}</p>
                 </div>
               </ul>
             </div>
@@ -40,7 +40,7 @@ const ContactUs = () => {
 
                 <div className="flex-col">
                   <h1 className="text-[16px] md:text-[24px] font-semibold">MAIL US :</h1>
-                  <p className="text-[16px] lg:text-[22px] md:text-[15px]">fashionista@gmail.com</p>
+                  <p className="text-[16px] lg:text-[22px] md:text-[15px]">{businessData?.ub_email}</p>
                 </div>
               </ul>
             </div>
@@ -57,7 +57,7 @@ const ContactUs = () => {
 
                 <div className="flex-col">
                   <h1 className="text-[16px] md:text-[24px] font-semibold">CALL US :</h1>
-                  <p className="text-[16px] lg:text-[22px] md:text-[15px]">Call: 1-800-123-9999</p>
+                  <p className="text-[16px] lg:text-[22px] md:text-[15px]">Call: {businessData?.ub_whatsapp_number}</p>
                 </div>
               </ul>
             </div>
@@ -74,7 +74,7 @@ const ContactUs = () => {
 
                 <div className="flex-col">
                   <h1 className="text-[16px] md:text-[24px] font-semibold">CATEGORY  :</h1>
-                  <p className="text-[16px] lg:text-[22px] md:text-[15px]">Fashion Mart</p>
+                  <p className="text-[16px] lg:text-[22px] md:text-[15px]">{userData?.ca_name}</p>
                 </div>
               </ul>
             </div>

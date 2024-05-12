@@ -9,7 +9,7 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Pagination, Navigation } from "swiper/modules";
 const ServicesBox = ({ businessServices }) => {
-  const url = 'http://localhost/adsp/assets/uploads/'
+  const url = 'https://www.admin.bizzata.in/assets/uploads/'
   return (
     <div id="services" className=" h-auto  bg-[#F2F1E5] py-24">
       <h3 className="font-bold text-5xl text-[#2C2927] text-center mt-7">

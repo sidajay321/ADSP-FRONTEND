@@ -12,7 +12,8 @@ import AppLayout from "./AppLayout";
 import galMock from "./MockData/GalMock"
 import gl2 from "./assits/gl2.png"
 
-const Gallery = () => {
+const Gallery = ({ businessData, url }) => {
+  console.log(businessData)
   return (
     <AppLayout>
       <div className=" my-10" id="gallery">
@@ -43,12 +44,12 @@ const Gallery = () => {
             className="max-w-[90%] lg:max-w-[80%]"
           >
             <Swiper>
-              {galMock.map((item, index) => (
+              {businessData.map((item, index) => (
                 <SwiperSlide key={index}>
                   <a href={item.link}>
                     <img
-                      src={gl2}
-                      alt={item.imgText}
+                      src={url + item.bg_image}
+                      alt={item.bg_image}
                       className="mx-auto h-[245px] w-[320px] sm:h-[200px] sm:w-[300px] rounded-md pb-10 gap-4"
                     />
                   </a>

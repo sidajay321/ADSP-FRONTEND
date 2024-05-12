@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import AppLayout from "./AppLayout";
-import Acc  from "./assits/Account.png"
-import Mal  from "./assits/Mail.png"
-import Phon  from "./assits/Phone.png"
-import Book  from "./assits/Open Book.png"
-import Not  from "./assits/Note.png"
-const Busapp = () => {
+import Acc from "./assits/Account.png"
+import Mal from "./assits/Mail.png"
+import Phon from "./assits/Phone.png"
+import Book from "./assits/Open Book.png"
+import Not from "./assits/Note.png"
+const Busapp = ({ businessData }) => {
+  console.log(businessData)
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [contact, setcontact] = useState("");
@@ -25,86 +26,18 @@ const Busapp = () => {
             BUSINESS HOURS
           </h1>
           <div className="border-2 sm:border-2 border-[#6BC785] rounded-[10px] ">
-            <div className=" mx-1 lg:ml-[45px] sm:mx-[25px] lg:my-[32px] sm:my-[25px] my-[15px] text-[#224F34]">
-              <h3 className="lg:text-[20px] sm:text-[18px] font-[20px] lg:mt-10 sm:mt-6">
-                MONDAY &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;{" "}
-                <span className="lg:text-[15px] sm:text-[13px] text-[12px]">
-                  9&nbsp;
-                </span>
-                A M &nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;
-                <span className="lg:text-[15px] sm:text-[13px] text-[12px]">
-                  9&nbsp;
-                </span>
-                P M
-              </h3>
+            <div className="text-center mx-1 lg:ml-[45px] sm:mx-[25px] lg:my-[32px] sm:my-[25px] my-[15px] text-[#224F34]">
+              <table className="table text-center w-75 mx-auto" style={{ fontSize: "20px", textTransform: "uppercase" }}>
+                {businessData.map((item, index) => (
+                  <tr style={{ marginTop: "20px" }}>
+                    <td style={{ paddingTop: "20px",textAlign:"left" }}>{item.bh_day}</td>
+                    <td style={{ paddingTop: "20px" }}>{item.bh_start_time}</td>
+                    <td style={{ paddingTop: "20px" }}> - </td>
+                    <td style={{ paddingTop: "20px" }}>{item.bh_end_time}</td>
+                  </tr>
+                ))}
+              </table>
 
-              <h3 className="lg:text-[20px] sm:text-[18px] font-[20px] lg:mt-4 sm:mt-3 ">
-                TUESDAY &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;{" "}
-                <span className="lg:text-[15px] sm:text-[13px] text-[12px]">
-                  9&nbsp;
-                </span>
-                A M &nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;
-                <span className="lg:text-[15px] sm:text-[13px] text-[12px]">
-                  9&nbsp;
-                </span>
-                P M
-              </h3>
-              <h3 className="lg:text-[20px] sm:text-[18px] font-[20px] lg:mt-4 sm:mt-3">
-                WEDNESDAY &nbsp; &nbsp;&nbsp; &nbsp;{" "}
-                <span className="lg:text-[15px] sm:text-[13px] text-[12px]">
-                  9&nbsp;
-                </span>
-                A M &nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;
-                <span className="lg:text-[15px] sm:text-[13px] text-[12px]">
-                  9&nbsp;
-                </span>
-                P M
-              </h3>
-              <h3 className="lg:text-[20px] sm:text-[18px] font-[20px] lg:mt-4 sm:mt-3">
-                THURSDAY &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp;{" "}
-                <span className="lg:text-[15px] sm:text-[13px] text-[12px]">
-                  9&nbsp;
-                </span>
-                A M &nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;
-                <span className="lg:text-[15px] sm:text-[13px] text-[12px]">
-                  9&nbsp;
-                </span>
-                P M
-              </h3>
-              <h3 className="lg:text-[20px] sm:text-[18px] font-[20px] lg:mt-4 sm:mt-3">
-                FRIDAY &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;
-                &nbsp; &nbsp;{" "}
-                <span className="lg:text-[15px] sm:text-[13px] text-[12px]">
-                  9&nbsp;
-                </span>
-                A M &nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;
-                <span className="lg:text-[15px] sm:text-[13px] text-[12px]">
-                  9&nbsp;
-                </span>
-                P M
-              </h3>
-              <h3 className="lg:text-[20px] sm:text-[18px] font-[20px] lg:mt-4 sm:mt-3">
-                SATURDAY &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;
-                <span className="lg:text-[15px] sm:text-[13px] text-[12px]">
-                  9&nbsp;
-                </span>
-                A M &nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;
-                <span className="lg:text-[15px] sm:text-[13px] text-[12px]">
-                  9&nbsp;
-                </span>
-                P M
-              </h3>
-              <h3 className="lg:text-[20px] sm:text-[18px] font-[20px] lg:mt-4 sm:mt-3">
-                SUNDAY &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;{" "}
-                <span className="lg:text-[15px] sm:text-[13px] text-[12px]">
-                  9&nbsp;
-                </span>
-                A M &nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;
-                <span className="lg:text-[15px] sm:text-[13px] text-[12px]">
-                  9&nbsp;
-                </span>
-                P M
-              </h3>
             </div>
           </div>
         </div>
@@ -156,7 +89,7 @@ const Busapp = () => {
                 <div className="py-2 flex  border-[#6BC785] border-2 rounded-[10px] px-3 ">
                   <img
                     src={Phon}
-                     alt=""
+                    alt=""
                     className="h-[30px] w-[30px] pt-2.5"
                   />
                   <input

@@ -1,16 +1,16 @@
 import React from "react";
 
 import AppLayout from "./AppLayout";
-import man from"./assits/man.png"
+import man from "./assits/man.png"
 import what from "./assits/WhatsApp.png"
 import fac from "./assits/Facebook Circled.png"
 import you from "./assits/YouTube.png"
 import inst from "./assits/Instagram.png"
-const Hader = () => {
+const Hader = ({ businessData }) => {
   return (
     <header>
       <div className="w-full sm:h-[550px] h-[390px] lg:h-[800px] pb-10 backgroundimage ">
-       
+
       </div>
       <AppLayout>
         <div class="grid grid-cols-3  gap-2 lg:h-[400px] h-full mt-[20px]" id="about">
@@ -37,26 +37,34 @@ const Hader = () => {
         </div>
         <div className="items-center mt-[-5px] lg:mt-[15px]  mb-4">
           <ul className="flex gap-[10px] lg:gap-[15px] px-4">
-            <img
-              src={what}
-              className="h-[50px] w-[50px] "
-              alt="whataap"
-            />
-            <img
-              src={fac}
-              alt="facbook"
-              className="h-[50px] w-[50px]"
-            />
-            <img
-              src={inst}
-              alt="instagram"
-              className="h-[50px] w-[50px]"
-            />
-            <img
-              src={you}
-              alt="youtube"
-              className="h-[50px] w-[50px] md:w-[60px]"
-            />
+            <a href={businessData?.ub_whatsapp_url}>
+              <img
+                src={what}
+                className="h-[50px] w-[50px] "
+                alt="whataap"
+              />
+            </a>
+            <a href={businessData?.ub_facebook_url}>
+              <img
+                src={fac}
+                alt="facbook"
+                className="h-[50px] w-[50px]"
+              />
+            </a>
+            <a href={businessData?.ub_instagram_url}>
+              <img
+                src={inst}
+                alt="instagram"
+                className="h-[50px] w-[50px]"
+              />
+            </a>
+            <a href={businessData?.ub_youtube_url}>
+              <img
+                src={you}
+                alt="ub_youtube_url"
+                className="h-[50px] w-[50px] md:w-[60px]"
+              />
+            </a>
           </ul>
         </div>
       </AppLayout>

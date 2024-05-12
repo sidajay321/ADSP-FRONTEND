@@ -10,22 +10,8 @@ import Product from './components/Product';
 import { HelmetProvider } from 'react-helmet-async';
 import { useParams } from 'react-router-dom';
 
-const Template1Home = () => {
-  const params = useParams();
-  console.log(params);
-  const [businessData, setBusinessData] = useState(null);
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await fetch(`http://localhost/adsp/custom/rest/api.php?getUserBusinessData=true&businessId=${params.businessId}`);
-        const data = await response.json();
-        setBusinessData(data);
-      } catch (error) {
-        console.error('Error fetching category data:', error);
-      }
-    };
-    fetchData();
-  }, [params.businessId]);
+const Template1Home = ({ businessData }) => {
+  console.log(businessData)
   return (
     <>
       <HelmetProvider>

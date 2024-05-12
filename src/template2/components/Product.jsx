@@ -11,7 +11,7 @@ import { Autoplay, FreeMode, Navigation, Pagination } from "swiper/modules";
 import AppLayout from "./AppLayout";
 import img1 from "./assits/img2.png";
 import { Link } from "react-router-dom";
-const Product = () => {
+const Product = ({ businessData, url }) => {
   return (
     <AppLayout>
       <div className="">
@@ -40,16 +40,22 @@ const Product = () => {
             className="max-w-[90%] lg:max-w-[80%]"
           >
             <div>
-              {ProductMock.map((item, index) => (
+              {businessData.map((item, index) => (
                 <SwiperSlide key={index}>
                   <div className="flex">
-                    <div className="relative sm:h-[400px] h-[450px]  sm:w-[250px] w-[330px]  lg:w-[480px] my-[60px] mx-2 example2 object-cover">
+                    <div style={{ textAlign: "center" }} className="relative sm:h-[400px] h-[450px]  sm:w-[250px] w-[330px]  lg:w-[480px] my-[60px] mx-2 example2 object-cover">
                       <img
-                        src={img1}
+                        src={url + item?.bp_image}
                         alt={`Image ${index}`}
                         className=" h-[400px] w-[320px] sm:h-[350px] lg:h-[350px] lg:w-[500px]  rounded-lg   example3"
                       />
-                      <Link to="/productsingle">
+                      <h6 style={{ fontWeight: "bold", textTransform: "capitalize" }}>{item?.bp_name}</h6>
+                      <Link
+                        to={{
+                          pathname: `/business/haileymart/product/${item.bp_id}`,
+                          state: 'cnjsdncskjk'
+                        }}
+                      >
                         <button className="bg-[#6BC785] hover:bg-[#6BC785] text-white font-bold py-2 sm:px-4  mt-4 rounded  ml-[70px] sm:ml-1 lg:ml-10 lg-mt-4 h-[54px] sm:h-[40px] lg:h-[48px] w-[200px]">
                           Click me
                         </button>
